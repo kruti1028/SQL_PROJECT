@@ -16,13 +16,8 @@ Describe your QA process and include the SQL queries used to execute it.
 
 2. Then I took revenue data from both tables. The revenue column from the analytics table had more data than the revenue column from all_session.
 
-3. Userid column is completely null and doesn't have any relevance here. Removed the column for more visibility by using the below query.
+3. Userid column is completely null and doesn't have any relevance here. Removed the column for more visibility.
 
-```sql
-  Alter table analytics
-  Drop column user_id
-
-```
 4. I had to change time_on_site values because that was given in integer value I changed them with time by using the below query.
 ```sql
   ALTER TABLE all_sessions 
@@ -31,19 +26,12 @@ Describe your QA process and include the SQL queries used to execute it.
 
 **All_session**
 1. Few columns like produtrefundamount, itemquantity, itemrevnue, searchkeyword are competly null and don't have any relevance there, so i removed all 4 columns.
-   ```sql
-    Alter table all_session
-    Drop column productrefundamount
-    Drop column itemquantity,
-    Drop column itemrevenue
-    Drop column search keyword
-  ```
 
-3. There are almost many columns has missing values, so replace them with zero where are integer values and N/A where are VARCHAR.
+2.There are almost many columns has missing values, so replace them with zero where are integer values and N/A where are VARCHAR.
 
-4. I have noticed many countries have cities that are not relevant to the country. for example, the country's name is The 'united sate' and its city name is 'France'.
+3.I have noticed many countries have cities that are not relevant to the country. for example, the country's name is The 'united sate' and its city name is 'France'.
 
-5. I changed some of the column name by using the below function:
+4.I changed some of the column name by using the below function:
 ```sql
    ALTER TABLE public.all_session
    RENAME COLUMN eCommerceoption TO Ecommerce_option
