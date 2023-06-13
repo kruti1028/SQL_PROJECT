@@ -1,7 +1,8 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+My project objective is to efficiently clean up this data and generate insightful analysis.
+
 
 ## Process
 ### (your step 1)
