@@ -42,7 +42,7 @@ SQL Queries:
     GROUP BY "v2ProductCategory", city, country 
     ORDER BY country
 ```
-Answer: I discovered that the Home/Apparels category is among the top categories for shopping and most ordered.
+Answer: I discovered that the Home/Apparels category is among the top categories for shopping and most ordered product.
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
