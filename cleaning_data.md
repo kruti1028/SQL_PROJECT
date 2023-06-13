@@ -12,6 +12,7 @@ Below, provide the SQL queries you used to clean your data.
 **All_session**
 
 1. Redundant columns in all_session. by using below function.
+   delete in all_session's productrefundamount, itemquantity, itemrevenue, search keyword columns. because, it all those columne were fully null.
    ```sql
       Alter table all_session
       Drop column productrefundamount
@@ -20,7 +21,8 @@ Below, provide the SQL queries you used to clean your data.
       Drop column search keyword
    ```
 
-2. For all_session table I used below function for remove duplicates.
+3. For all_session table I used below function for remove duplicates.
+   used this functions to verify duplicate values.
 ```sql
    delete from public.all_session 
    where "fullVisitorId" in 
@@ -32,6 +34,12 @@ Below, provide the SQL queries you used to clean your data.
 ```
 
 **Analytics**
+
+1. Removed redundant column
+   i removed userid column because column is fully null.
+```sql
+     ALTER TABLE analytics 
+     DROP COLUMN userid;
 
 1. For removing duplicate in analytics i used below function.
 ```sql   
@@ -49,6 +57,40 @@ Below, provide the SQL queries you used to clean your data.
 				 bounces, revenue, unit_price
    having count(*) > 1)
 ```
+
+3. Transfer unit price with division of 100,00,00
+   My data type was in integer so i had to changed data type into decimal data type.
+```sql
+   Alter table  "Analytics"
+   Alter column revenue type decimal
+   Using revenue :: decimal
+```
+Then i devided the unitprice with 100,00,00
+```sql
+   update "Analytics" 
+   set revenue = (revenue/1000000)
+```
+The unit price value has many decimal points so i round it with given function.
+```sql
+   UPDATE "Analytics"
+   SET revenue = ROUND(revenue::numeric, 6)
+```
+
+**Products**
+
+there were no duplicate values in product table and no any redundant column.
+
+**Sales by sku**
+
+No need to clean/transformation data. The was in good condition.
+
+**Sles report**
+
+No need to clean/transformation data. The was in good condition.
+
+
+
+
 
 
    
