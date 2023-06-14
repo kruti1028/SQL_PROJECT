@@ -1,6 +1,6 @@
 What are your risk areas? Identify and describe them.
 
-1. Removing Duplicates: The analytics and all_session had quit no duplicate.
+1. Removing Duplicates: The analytics and all_session had quit duplicates.
 
 2. Handling Missing Data: The all_session table had missing data in the country and the city like "not available in demo dataset.
 
