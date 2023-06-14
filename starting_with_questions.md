@@ -38,7 +38,7 @@ SQL Queries:
 ```sql
     SELECT als.city, als.country, als.v2productcategory, count(*) total_orders
     FROM all_sessions als
-    JOIN products p USING(productsku)
+    JOIN products p on als.productsku = p.productsku
     WHERE p.orderedquantity > 0 AND city <> '(not set)' 
     GROUP BY als.city, als.country, als.v2productcategory
     ORDER BY total_orders DESC;
