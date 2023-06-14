@@ -22,7 +22,7 @@ SQL Queries:
   having count("v2ProductName") > 1
   limit 5
 ```
-Answer: Here is the top 5 customer who visited a product more than one time.
+Answer: Here is the top 5 customer who visited a one product more than one time.
     
 <img width="587" alt="Screenshot 2023-06-13 at 4 26 44 PM" src="https://github.com/kruti1028/SQL_PROJECT/assets/126723087/3ee62829-d711-4358-be7f-9bc552b6923f">
 
