@@ -10,11 +10,8 @@ My project objective is to efficiently clean up this data and generate insightfu
 2. trying to understand all given table
 3. wrote down data manipulation SQL queries for cleaning data, and making it in a readable format(i.e. changing the time integer to time.)
 4. wrote down data SQL queries to solve the assignment.
-
-### 
-(your step 2)
-1. wrote down my data analysis question and solved it using PGADMIN.
-2. tried to create an ERD diagram but there are a lot of sufficient data so it's hard to connect them 
+5. wrote down my data analysis question and solved it using PGADMIN.
+6. tried to create an ERD diagram but there are a lot of sufficient data so it's hard to connect them 
 
 
 ## Results
