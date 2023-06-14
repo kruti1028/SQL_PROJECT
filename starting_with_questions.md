@@ -36,11 +36,12 @@ Answer: here is the result of the average number of the product ordered from vis
 
 SQL Queries:
 ```sql
-    SELECT "v2ProductCategory", city, country 
-    FROM public.all_session als 
-    WHERE city <> '(not set)' AND city <> 'not available in demo dataset' AND country <> '(not set)' 
-    GROUP BY "v2ProductCategory", city, country 
-    ORDER BY country
+    SELECT als.city, als.country, als.v2productcategory, count(*) total_orders
+    FROM all_sessions als
+    JOIN products p USING(productsku)
+    WHERE p.orderedquantity > 0 AND city <> '(not set)' 
+    GROUP BY als.city, als.country, als.v2productcategory
+    ORDER BY total_orders DESC;
 ```
 Answer: I discovered that the Home/Apparels category is among the top categories for shopping and most ordered product.
 
