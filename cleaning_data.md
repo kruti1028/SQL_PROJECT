@@ -40,6 +40,7 @@ Below, provide the SQL queries you used to clean your data.
 ```sql
      ALTER TABLE analytics 
      DROP COLUMN userid;
+```
 
 1. For removing duplicate in analytics i used below function.
 ```sql   
