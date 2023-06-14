@@ -57,7 +57,7 @@ SQL Queries:
     city,
     COUNT("productSKU") AS productcount 
     FROM public.all_session 
-    WHERE country <> 'not available in demo dataset' AND city <> '(not set)' AND city <> 'not available in demo dataset' 
+    WHERE country <> 'not available in demo dataset' AND city <> 'not available in demo dataset' 
     GROUP BY "productSKU", "v2ProductName", country, city 
     ORDER BY productcount DESC 
     LIMIT 10;
