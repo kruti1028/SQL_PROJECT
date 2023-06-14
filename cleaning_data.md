@@ -46,7 +46,7 @@ Below, provide the SQL queries you used to clean your data.
 ```sql   
       select *, ctid
       from analytics
- ```
+```
 ```sql
    delete from analytics
    where ctid in (select max(ctid)
